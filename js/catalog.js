@@ -3,7 +3,9 @@
 'use strict';
 
 // Set up an empty cart for use on this page.
+var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 var cart = new Cart([]);
+event.preventDefault();
 
 // On screen load, we call this method to put all of the busmall options
 // (the things in the Product.allProducts array) into the drop down list.
@@ -38,15 +40,24 @@ function handleSubmit(event) {
 // TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
+var itemsValue = document.getElementById('items').value
   // TODO: get the quantity
+var quantityValue = document.getElementById('quantity').value
   // TODO: using those, add one item to the Cart
+cart.addItem(itemsValue, quantityValue);
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() {}
+function updateCounter() {
+  var spanEl = document.getElementById('itemCount');
+  spanEl.textContent = cart.items.length;
+  // for (var i = 0; i < cart.items.length)
+}
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
+  
+  var cartItem = new CartItem(itemsValue, quantityValue);
   // TODO: Get the item and quantity from the form
   // TODO: Add a new element to the cartContents div with that information
 }
@@ -60,3 +71,4 @@ catalogForm.addEventListener('submit', handleSubmit);
 // Before anything else of value can happen, we need to fill in the select
 // drop down list in the form.
 populateForm();
+updateCounter();
