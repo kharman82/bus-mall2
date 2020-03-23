@@ -1,1 +1,49 @@
 /* TODO: Make it awesome */
+
+#header1 {
+    display: inline-block;
+    width: 900px;
+    background-color: rgb(219, 105, 128);
+
+}
+
+#bm  {
+    display: inline-block;
+    width: 400px;
+    background-color: rgb(219, 105, 128);
+    font-size: 40px;
+    font-family: fantasy;
+    font-style: italic;
+}
+
+
+nav {
+    display: inline-block;
+    width: 300px;
+    margin-top: 15px;
+    margin-left: 175px;
+    background-color: rgb(219, 105, 128);
+}
+
+h1 {
+    font-family: fantasy;
+    font-size: 35px;
+}
+
+main {
+    display: inline-block;
+    width: 900px;
+    height: 450px;
+    background-color: rgb(52, 235, 165);
+
+}
+#bottom-logo {
+    display: inline-block;
+    margin-left: 300px;
+    margin-bottom: 5px;
+    
+}
+li {
+    font-style: italic;
+    font-weight: bold;
+}
